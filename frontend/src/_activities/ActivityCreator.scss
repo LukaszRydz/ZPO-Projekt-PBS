@@ -1,0 +1,107 @@
+@use "./src/globals.scss" as *;
+
+.activity-creator {
+    @include flex-column-center;
+    max-height: 100svh;
+    padding: 15px;
+
+    gap: 15px;
+
+    color: white;
+    background-color: var(--color5);
+
+    border-radius: 5px;
+
+    .title {
+        @include flex-column-center;
+        gap: 10px;
+
+        width: 100%;
+        max-width: 315.88px;
+
+        h2 {
+            margin-right: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px 12px;
+            font-family: 'Lato', 'Roboto', sans-serif;
+
+            color: white;
+            background-color: var(--color5);
+
+            border: 1px solid var(--color3);
+            border-radius: 5px;
+
+            &:focus {
+                outline: none;
+                border: 1px solid var(--color3);
+            }
+
+        }
+    }
+
+    .calendar {
+        padding: 20px 4px;
+        border: 1px solid var(--color3);
+        border-radius: 5px;
+
+        * {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        //! Hides the input field we no need this :)
+        .flatpickr-input {display: none;}
+        
+        // Month element 
+        .flatpickr-month, .flatpickr-monthDropdown-months {background-color: var(--color5)}
+        // Day element
+        .flatpickr-weekday {background-color: var(--color5)}
+        // Days element
+        .flatpickr-calendar {background-color: var(--color5)}
+        // Selection styles
+        .flatpickr-day:hover {
+            background: none;
+            border: 1px solid var(--color3);
+        }
+        .selected {
+            background-color: var(--color3);
+            &:hover {
+                background-color: var(--color3);
+            }
+        }
+    }
+
+    .controls {
+        @include flex-row-center;
+        justify-content: space-around;
+        width: 100%;
+        .activity-btn {
+            width: 45%;
+            height: 35px;
+            padding: 5px 5px;
+
+            color: white;
+            border-radius: 15px;
+
+            &:hover {
+                border-width: 0px 0px 3px 0px;
+                filter: brightness(0.9);
+            }
+        }
+
+        .exit {
+            background-color: var(--color4);
+            border-width: 0px 0px 6px 0px;
+            border-color: var(--color4);
+        }
+
+        .save {
+            background-color: var(--color3);
+            border-width: 0px 0px 6px 0px;
+            border-color: var(--color3);
+        }
+    }
+}

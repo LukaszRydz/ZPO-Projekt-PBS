@@ -1,0 +1,22 @@
+@use "./src/globals.scss" as *;
+
+.app {
+    @include flex-row-center;
+    background-color: var(--color2);
+    .pages {
+        @include flex-row-center;
+        height: 100vh;
+        width: 95vw;
+        
+        overflow: hidden;
+
+        background-color: var(--color3);
+
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            height: calc(100vh - 100px);
+            width: 100vw;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use "./src/globals.scss" as *;
+
+.create-new-btn {
+    @include flex-column-center;
+
+    width: 90px;
+    height: 90px;
+
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+
+    background-color: var(--color5);
+    border-width: 0 0 8px 0;
+    border-style: solid;
+    border-color: var(--color2);
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    img {
+        width: 90%;
+        height: 90%;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+
+    &:hover {
+        filter: brightness(0.8);
+        border-width: 0 0 4px 0;
+    }
+
+    @media (max-width: 500px) {
+        width: 70px;
+        height: 40px;
+        
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        
+
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        border: 3px solid var(--color2);
+
+        &:hover {
+            filter: brightness(0.8);
+            border: 4px solid var(--color2);
+        }
+    }
+}

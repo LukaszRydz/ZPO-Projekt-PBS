@@ -1,0 +1,116 @@
+@use "./src/globals.scss" as *;
+
+.activities {
+    @include flex-column-center;
+
+    height: 100dvh;
+    width: 100%;
+    padding: 40px 20px;
+    padding-bottom: 80vh;
+
+    gap: 25px;
+
+    overflow: hidden auto;
+    justify-content: space-between;
+
+    background-color: var(--color3);
+
+    .activity {
+        @include flex-column-center;
+        align-items: start;
+        gap: 15px;
+        position: relative;
+
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        padding-bottom: 25px;
+
+        background-color: var(--color5);
+        color: white;
+        border-radius: 10px;
+
+        .info {
+            @include flex-column-center;
+            gap: 10px;
+            width: 100%;
+            .info-div {
+                @include flex-column-center;
+                align-items: start;
+                gap: 5px;
+                width: 100%;
+                .header {
+                    padding-left: 5px;
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
+                }
+                .content {
+                    width: 100%;
+                    padding: 3px;
+                    border: 1px solid var(--color2);
+                    border-radius: 7px;
+                }
+            }
+
+            .timer { 
+                @include flex-row-center;
+                width: auto;
+                padding: 2px 15px;
+    
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                text-wrap: nowrap;
+
+                background-color: var(--color5);
+                border: 2px solid var(--color2);
+                border-radius: 20px;
+            }        
+        }
+
+        .controls {
+            @include flex-row-center;
+            width: 95%;
+            gap: 10px;
+
+            button {
+                height: 30px;
+                width: 48%;
+                max-width: 300px;
+
+
+                border-radius: 16px;        
+                border-width: 0 0 4px 0px;
+                border-style: solid;
+                border-color: var(--color2);
+                background-color: var(--color3);
+
+                color: white;
+                
+
+                &:disabled {
+                    background-color: gray;
+                    border-color: rgb(80, 80, 80);
+
+                    cursor: not-allowed;
+                    &:hover {
+                        background-color: gray;
+                        border-color: rgb(80, 80, 80);
+                    }
+                }
+            }
+            
+            .delete-btn:hover {
+                background-color: red;
+                border-width: 0 0 6px;
+                border-color: rgb(175, 3, 3);
+            }
+
+            .check-btn:hover {
+                background-color: var(--color8);
+                border-width: 0 0 6px;
+                border-color: var(--color9);
+            }
+        }
+    }
+}

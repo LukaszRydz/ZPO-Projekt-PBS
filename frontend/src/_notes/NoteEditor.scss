@@ -1,0 +1,102 @@
+@use "./src/globals.scss" as *;
+
+.note-editor {
+    @include flex-column-center;
+    height: 100svh;
+    max-height: 100svh;
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: auto;
+
+    gap: 15px;
+
+    color: white;
+
+    .title-input {
+        width: 100%;
+        position: relative;
+
+        .length {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-10px, 30%);
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            
+            border: none;
+            border-radius: 10px;
+    
+            color: white;
+            background-color: var(--color5);
+        }
+    }
+
+    .content-input {
+        @include flex-column-center;
+        position: relative;
+        width: 100%;
+        flex-grow: 0.95;
+
+        .length {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-10px, 30%);
+            color: white;
+        }
+
+        .header {
+            margin-right: auto;
+        }
+
+        textarea {
+            height: 100%;
+            width: 100%;
+
+            padding: 10px;
+            
+            border: none;
+            border-radius: 10px;
+
+            color: white;
+            background-color: var(--color5);
+
+
+            resize: none;
+        }
+    }
+
+    .controls {
+        @include flex-row-center;
+        justify-content: space-between;
+
+        width: 100%;
+        flex-grow: 0.05;
+
+        button {
+            width: 49%;
+            height: 100%;
+
+            border: none;
+            border-radius: 10px;
+
+            color: white;
+            background-color: var(--color5);
+
+            cursor: pointer;
+        }
+
+        .exit:hover {
+            background-color: red;
+        }
+
+        .save:hover {
+            background-color: green;
+        }
+    }
+}

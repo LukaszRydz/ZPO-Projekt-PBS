@@ -1,0 +1,139 @@
+@use "./src/globals.scss" as *;
+
+.habits {
+    @include flex-column-center;
+
+    max-height: 100%;
+    width: 100%;
+    padding: 40px 20px;
+    margin-bottom: auto;
+    gap: 25px;
+
+    overflow: hidden auto;
+    justify-content: space-between;
+
+    background-color: var(--color3);
+
+    .habit {
+        position: relative;
+        @include flex-column-center;
+        gap: 15px;
+        width: 100%;
+
+        padding: 20px 10px;
+
+        color: white;
+        background-color: var(--color5);
+
+        border: 3px solid var(--color2);
+        border-radius: 15px;
+
+        .done-mark {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            width: 40px;
+            height: 40px;
+            
+        }
+
+        .title-container {
+            @include flex-column-center;
+            width: 95%;
+            gap: 5px;
+            .header {
+                padding-left: 5px;
+                margin-right: auto;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+            
+            .content {
+                @include flex-row-center;
+
+                width: 100%;
+                padding: 5px 15px;
+                font-size: clamp(1rem, 2vw, 1.9rem);
+                background-color: var(--color5);
+
+                border: 2px solid var(--color3);
+                border-radius: 10px;
+                word-break: break-all;
+            }
+        }
+
+        .controls {
+            @include flex-row-center;
+            width: 95%;
+            gap: 10px;
+
+            button {
+                height: 30px;
+                width: 48%;
+                max-width: 300px;
+
+
+                border-radius: 16px;        
+                border-width: 0 0 4px 0px;
+                border-style: solid;
+                border-color: var(--color2);
+                background-color: var(--color3);
+
+                color: white;
+                
+
+                &:disabled {
+                    background-color: gray;
+                    border-color: rgb(80, 80, 80);
+
+                    cursor: not-allowed;
+                    &:hover {
+                        background-color: gray;
+                        border-color: rgb(80, 80, 80);
+                    }
+                }
+            }
+            
+            .delete-btn:hover {
+                background-color: red;
+                border-width: 0 0 6px;
+                border-color: rgb(175, 3, 3);
+            }
+
+            .check-btn:hover {
+                background-color: var(--color8);
+                border-width: 0 0 6px;
+                border-color: var(--color9);
+            }
+
+        }
+    
+        .combo {
+            @include flex-row-center;
+            padding: 2px 15px;
+            margin: auto;
+
+            position: absolute;
+            bottom: 0;
+            transform: translateY(50%);
+
+            font-size: 1rem;
+
+            background-color: var(--color5);
+            border: 2px solid var(--color2);
+            border-radius: 20px;
+        }
+    }
+
+}
+
+@media (min-width: 800px) {
+    .habits {
+        @include flex-row-center;
+        margin-bottom: auto;
+        flex-wrap: wrap;
+        .habit {
+            width: 47%;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use "./src/globals.scss" as *;
+
+.separator {
+    @include flex-row-center();
+    width: 90%;
+    
+    hr {
+        flex-grow: 1;
+        border: 0;
+        border-top: 1px solid white;
+    }
+
+    .separator-text {
+        margin: 0 10px;
+        transform: translateY(-10%);
+    }
+}

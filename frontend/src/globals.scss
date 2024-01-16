@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+:root {
+    --color1: #392f2f;
+    --color2: #3a7563;
+    --color3: #0dd180; 
+    --color4: #e6d3a7;
+    --color5: #161a1f;
+    --color6: #05386B;
+    --color7: #042e58;
+    --color8: #fe9832;
+    --color9: #c65923;
+    
+
+    -font1 : 'Lato', sans-serif;
+    -font2 : 'Roboto', sans-serif;
+}
+
+* {
+    font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// all params can't be marked
+p, h1, h2, h3, button {
+    user-select: none;
+}

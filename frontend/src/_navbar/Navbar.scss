@@ -1,0 +1,101 @@
+@use "./src/globals.scss" as *;
+
+.navbar {
+    height: 100vh;
+    min-width: 100px;
+    width: 5vw;
+    padding: 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 25px;
+
+    text-align: center;
+    border-radius: 0;
+    background-color: var(--color5);
+
+    button {
+        @include flex-column-center;
+
+        color: white;
+        text-decoration: none;
+        -webkit-user-drag: none;
+        user-select: none;
+
+        background: none;
+        border: none;
+
+        img {
+            width: 65px;
+            height: 65px;
+            -webkit-user-drag: none;
+        }
+
+        &:hover {
+            img, p {
+                filter: brightness(0.6);
+            }
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+
+            img, p {
+                filter: brightness(0.6);
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        height: 100px;
+        width: 100vw;
+        padding: 0 5px;
+        text-align: center;
+
+        position: fixed;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+
+        border-top-width: 3px;
+        border-top-style: solid;
+        border-color: var(--color2);
+
+        button {
+            font-size: 0.8rem;
+            height: 100%;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:disabled {
+                .arrow-up {
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(-100%);
+            
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-bottom: 15px solid var(--color2);
+            
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        transform: translate(-50%, 4px);
+
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 11px solid var(--color5);
+                    }
+                }
+            }  
+        }
+
+        button:nth-child(2) {
+            margin-right: 30px;
+        }
+    }
+}

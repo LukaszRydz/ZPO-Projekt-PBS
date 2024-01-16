@@ -1,0 +1,137 @@
+{
+    "pl-PL": {
+        "navbar": {
+            "home": "Strona główna",
+            "habits": "Nawyki",
+            "notes": "Notatki",
+            "activities": "Aktywności",
+            "settings": "Ustawienia"
+        },
+        "notes": {
+            "notesNotFound": "Nie znaleziono notatek",
+            "fetchingNotes": "Pobieranie notatek..."
+        },
+        "note": {
+            "edited": "Edytowano:",
+            "title": "Tytuł:",
+            "deleting": "Usuwanie..."
+        },
+        "noteEditor": {
+            "title": "Tytuł:",
+            "content": "Treść:",
+            "exitBtn": "Wyjdź",
+            "saveBtn": "Zapisz",
+            "saveNote": "Zapisywanie..."
+        },
+        "habits": {
+            "habitsNotFound": "Nie znaleziono nawyków",
+            "fetchingHabits": "Pobieranie nawyków"
+        },
+        "habit": {
+            "header": "Nawyk:",
+            "deleteButton": "Usuń",
+            "doneButton": "Zrobione",
+            "saveHabit": "Zapisywanie...",
+            "deleteHabit": "Usuwanie..."
+        },
+        "habitCreator": {
+            "header": "Tytuł:",
+            "exitBtn": "Wyjdź",
+            "saveBtn": "Zapisz",
+            "saveHabit": "Zapisywanie..."
+        },
+        "activities": {
+            "fetchingActivities": "Pobieranie aktywności...",
+            "activitiesNotFound": "Nie znaleziono aktywności"
+
+        },
+        "activity": {
+            "deletingActivity": "Usuwanie aktywności..."
+        },
+        "activityCreator": {
+            "title": "Aktywność:",
+            "exitBtn": "Wyjdź",
+            "saveBtn": "Zapisz",
+            "saveActivity": "Zapisywanie..."
+        },
+        "settings": {
+            "languages": "Języki:",
+            "deleteAccountBtn": "Usuń konto",
+            "deleteAccount": "Usuwanie konta...",
+            "changeLanguage": "Zmiana języka...",
+            "changePassword": "Wysyłanie emaila...",
+            "gettingUser": "Pobieranie użytkownika...",
+            "userSettings": "Ustawienia użytkownika",
+            "changePasswordBtn": "Zmień hasło",
+            "logoutBtn": "Wyloguj się"
+        }
+    },
+
+    "en-US": {
+        "navbar": {
+            "home": "Home",
+            "habits": "Habits",
+            "notes": "Notes",
+            "activities": "Activities",
+            "settings": "Settings"
+        },
+        "notes": {
+            "notesNotFound": "Notes not found",
+            "fetchingNotes": "Fetching notes..."
+        },
+        "note": {
+            "edited": "Edited:",
+            "title": "Title:",
+            "deleting": "Deleting..."
+        },
+        "noteEditor": {
+            "title": "Title:",
+            "content": "Content:",
+            "exitBtn": "Exit",
+            "saveBtn": "Save",
+            "saveNote": "Saving..."
+        },
+        "habits": {
+            "habitsNotFound": "Habits not found",
+            "fetchingHabits": "Fetching habits"
+        },
+        "habit": {
+            "header": "Habit:",
+            "deleteButton": "Delete",
+            "doneButton": "Done",
+            "saveHabit": "Saving...",
+            "deleteHabit": "Deleting..."
+        },
+        "habitCreator": {
+            "header": "Title:",
+            "exitBtn": "Exit",
+            "saveBtn": "Save",
+            "saveHabit": "Saving..."
+        },
+        "activities": {
+            "fetchingActivities": "Fetching activities...",
+            "activitiesNotFound": "Activities not found"
+
+        },
+        "activity": {
+            "deletingActivity": "Deleting activity..."
+        },
+        "activityCreator": {
+            "title": "Activity:",
+            "exitBtn": "Exit",
+            "saveBtn": "Save",
+            "saveActivity": "Saving..."
+        },
+        "settings": {
+            "languages": "Languages:",
+            "deleteAccountBtn": "Delete account",
+            "deleteAccount": "Deleting account...",
+            "changeLanguage": "Changing language...",
+            "changePassword": "Sending email...",
+            "gettingUser": "Getting user...",
+            "userSettings": "User settings",
+            "changePasswordBtn": "Change password",
+            "logoutBtn": "Logout"
+        }
+    }
+}
